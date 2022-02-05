@@ -1,0 +1,21 @@
+HTML Lists
+HTML lists allow web developers to group a set of related items in lists.
+1. ordered, 2. unordered, 3.HTML description
+
+1.ordered:
+An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+
+2. unordered:
+An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+
+3.HTML Description Lists
+
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and
+the <dd> tag describes each term.
+
+<ul>	Defines an unordered list
+<ol>	Defines an ordered list
+<li>	Defines a list item
+<dl>	Defines a description list
+<dt>	Defines a term in a description list
+<dd>	Describes the term in a description list

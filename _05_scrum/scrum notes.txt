@@ -1,0 +1,77 @@
+Scrum:
+
+
+Scrum is a framework which has solutions for complex adaptive problems, 
+while productively and creatively delivering products of the highest possible value.
+
+Scrum is a lightweight framework that helps people, teams and organizations 
+generate value through adaptive solutions 
+for complex problems. 
+This Guide contains the definition of Scrum. This definition consists of Scrum’s accountabilities, 
+events, artifacts, and the rules that bind them together. 
+
+In a nutshell, Scrum requires a Scrum Master to foster an environment where:
+
+1. Product Backlog:
+
+A Product Owner orders the work for a complex problem into a Product Backlog.
+a product backlog is a prioritized list of deliverables (such as new features) that should be implemented 
+as part of a project or product development. It's a decision-making artifact that helps you estimate, refine, 
+and prioritize everything you might sometime in the future want to complete
+
+
+2. Sprint planning:
+
+The Scrum Team turns a selection of the work into an Increment of value during a Sprint.
+
+
+3. Sprint Backlog:
+
+The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint.
+Sprint planning is an event in scrum that kicks off the sprint. 
+The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved. ... 
+The What – The product owner describes the objective(or goal) of the sprint and what backlog items contribute to that goal.
+
+     --------Repeat-------------
+
+4. Scrum Team:
+
+A Scrum Team is a collection of individuals working together to deliver the requested and committed product increments. 
+Within the Scrum Framework all work delivered to the customer is done by dedicated Scrum To work effectively 
+it is important for a Scrum Team that everyone within the team. follows a common goal.
+
+5. Daily Scrum
+
+In Scrum, on each day of a sprint, the team holds a daily scrum meeting called the "daily scrum.” 
+Meetings are typically held in the same location and at the same time each day. 
+Ideally, a daily scrum meeting is held in the morning, as it helps set the context for the coming day's work
+
+6. Increment
+
+Product increment is the integration of all the completed list of Product Backlog Items where as in a Project, 
+Product Increment is the integration of all the completed list of Sprint backlog items. 
+With each sprint, the product increment increases in terms of delivered functionality.
+
+
+
+7. Sprint Review
+
+The sprint review is a Scrum event that takes place at the end of the sprint, 
+just before the retrospective. 
+The purpose of the review is to evaluate the latest features and to consider the plan for the product in the future.
+
+
+
+8. Sprint Retrospective
+
+The sprint retrospective is a recurring meeting held at the end of a sprint used to discuss 
+what went well during the previous sprint cycle and what can be improved for the next sprint. 
+The Agile sprint retrospective is an essential part of the Scrum framework for developing, delivering, and managing complex projects.
+
+
+
+ 
+
+
+
+

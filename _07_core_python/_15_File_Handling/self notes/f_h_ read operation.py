@@ -1,0 +1,7 @@
+print("performing read operation")
+file=open("file.txt",'r')
+#print(file.read())
+#print(file.readline())
+#print(file.readlines())
+#print(file.readline(5))
+print(file.readline(15))

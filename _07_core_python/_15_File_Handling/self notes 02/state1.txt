@@ -1,0 +1,13 @@
+To move file pointer from one point to another, use seek() method.
+ it makes two argumentsoffset - represents how many bytes to moveoffset - represents how many bytes to moveoffset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move
+ offset - represents how many bytes to move

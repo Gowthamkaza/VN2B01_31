@@ -1,0 +1,294 @@
+Triggers:
+
+PostgreSQL Triggers are database callback functions, which are automatically performed 
+when a specified database event occurs.
+
+
+A trigger defines a set of actions that are performed in response to an insert, update, or delete operation on a specified table. 
+When such an SQL operation is executed, the trigger is said to have been activated. 
+Triggers are optional and are defined using the CREATE TRIGGER statement.
+
+
+Types of Triggers:
+1. BEFORE
+2. AFTER
+3. INSTEAD OF
+
+
+The following are important points about PostgreSQL triggers −
+
+
+1. Before the operation is attempted on a row (before constraints are checked and the INSERT, UPDATE or DELETE is attempted)
+
+2. After the operation has completed (after constraints are checked and the INSERT, UPDATE, or DELETE has completed)
+
+3. Instead of the operation (in the case of inserts, updates or deletes on a view)
+
+
+
+In PostgreSQL trigger, we can perform the following commands:
+
+CREATE Trigger
+ALTER Trigger
+DROP Trigger
+ENABLE Trigger
+DISABLE Trigger
+Let us understand them one by one:
+
+Create trigger: In PostgreSQL, the CREATE TRIGGER command generates our first trigger step by step.
+Alter trigger: The ALTER TRIGGER command is used to rename a trigger.
+Drop trigger: The DROP TRIGGER command is used to define the steps to remove a trigger from a table
+Enable triggers: In the PostgreSQL trigger, the ENABLE TRIGGER statement allows a trigger or all triggers related to a table.
+Disable trigger: The DISABLE TRIGGER is used to display how we can disable a trigger or all triggers linked with a table.
+
+A trigger that is marked FOR EACH ROW is called once for every row that the operation modifies. 
+In contrast, a trigger that is marked FOR EACH STATEMENT only executes once for any given operation, regardless of how many rows it modifies.
+
+Both, the WHEN clause and the trigger actions, may access elements of the row 
+being inserted, deleted or updated using references of the form NEW.column-name and OLD.column-name, 
+where column-name is the name of a column from the table that the trigger is associated with.
+
+If a WHEN clause is supplied, the PostgreSQL statements specified are only executed for rows for which the WHEN clause is true. If no WHEN clause is supplied, the PostgreSQL statements are executed for all rows.
+
+If multiple triggers of the same kind are defined for the same event, they will be fired in alphabetical order by name.
+
+The BEFORE, AFTER or INSTEAD OF keyword determines when the trigger actions will be executed relative to the insertion, modification or removal of the associated row.
+
+Triggers are automatically dropped when the table that they are associated with is dropped.
+
+The table to be modified must exist in the same database as the table or view to which the trigger is attached and one must use just tablename, not database.tablename.
+
+A CONSTRAINT option when specified creates a constraint trigger. This is the same as a regular trigger except 
+that the timing of the trigger firing can be adjusted using SET CONSTRAINTS. 
+Constraint triggers are expected to raise an exception when the constraints they implement are violated.
+
+Syntax
+The basic syntax of creating a trigger is as follows −
+
+CREATE  TRIGGER trigger_name [BEFORE|AFTER|INSTEAD OF] event_name
+ON table_name
+[
+ -- Trigger logic goes here....
+];
+
+
+Here, event_name could be INSERT, DELETE, UPDATE, and TRUNCATE database operation on the mentioned table table_name. 
+You can optionally specify FOR EACH ROW after table name.
+
+The following is the syntax of creating a trigger on an UPDATE operation on one or more specified columns of a table as follows −
+
+CREATE  TRIGGER trigger_name [BEFORE|AFTER] UPDATE OF column_name
+ON table_name
+[
+ -- Trigger logic goes here....
+];
+Example
+Let us consider a case where we want to keep audit trial for every record being inserted in COMPANY table, 
+which we will create newly as follows (Drop COMPANY table if you already have it).
+
+
+
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+
+
+we will create a new table called AUDIT 
+where log messages will be inserted whenever 
+there is an entry in COMPANY table for a new record −
+
+
+
+CREATE TABLE AUDIT(
+   EMP_ID INT NOT NULL,
+   ENTRY_DATE TEXT NOT NULL
+);
+
+
+Here, ID is the AUDIT record ID, and EMP_ID is the ID, which will come from COMPANY table, 
+and DATE will keep timestamp when the record will be created in COMPANY table. 
+So now, let us create a trigger on COMPANY table as follows 
+
+
+step 1: creating  TRIGGER function - auditlogfunc()
+
+Where auditlogfunc() is a PostgreSQL procedure and has the following definition −
+
+CREATE OR REPLACE FUNCTION auditlogfunc() 
+RETURNS TRIGGER 
+LANGUAGE PLPGSQL  
+AS  
+$$ 
+BEGIN
+INSERT INTO AUDIT(EMP_ID, ENTRY_DATE) VALUES (new.ID, current_timestamp);
+RETURN NEW;
+END;
+$$ 
+
+
+step 2-  creating trigger - example_trigger
+
+CREATE TRIGGER example_trigger AFTER INSERT ON company
+FOR EACH ROW EXECUTE PROCEDURE auditlogfunc();
+
+
+
+step 3 - Insert data into company table
+
+Let us start inserting record in COMPANY table which should result in creating an audit log 
+record in AUDIT table. 
+So let us create one record in COMPANY table as follows −
+
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Paul', 32, 'California', 20000.00 );
+
+This will create one record in COMPANY table, which is as follows −
+
+ id | name | age | address      | salary
+----+------+-----+--------------+--------
+  1 | Paul |  32 | California   |  20000
+
+Same time, one record will be created in AUDIT table. 
+This record is the result of a trigger, which we have created on INSERT operation on COMPANY table. 
+Similarly, you can create your triggers on UPDATE and DELETE operations based on your requirements.
+
+ emp_id |          entry_date
+--------+-------------------------------
+      1 | 2013-05-05 15:49:59.968+05:30
+(1 row)
+
+
+
+Listing TRIGGERS
+You can list down all the triggers in the current database from pg_trigger table as follows −
+
+SELECT * FROM pg_trigger;
+
+
+The above given PostgreSQL statement will list down all triggers.
+
+If you want to list the triggers on a particular table, then use AND clause with table name as follows −
+
+SELECT tgname FROM pg_trigger, pg_class WHERE tgrelid=pg_class.oid AND relname='company';
+
+The above given PostgreSQL statement will also list down only one entry as follows −
+
+     tgname
+-----------------
+ example_trigger
+(1 row)
+Dropping TRIGGERS
+
+The following is the DROP command, which can be used to drop an existing trigger −
+
+DROP TRIGGER trigger_name;
+
+
+_____________USING TRIGGER BEFORE UPDATE___________
+
+Clients Table:
+
+CREATE TABLE Clients(  
+   ID INT GENERATED ALWAYS AS IDENTITY,  
+   First_name VARCHAR(50) NOT NULL,  
+   Last_name VARCHAR(50) NOT NULL,  
+   PRIMARY KEY(ID)  
+);  
+
+
+
+
+Client audits:
+
+CREATE TABLE Client_audits (  
+   ID INT GENERATED ALWAYS AS IDENTITY,  
+   Client_id INT NOT NULL,  
+   First_name VARCHAR(50) NOT NULL,  
+   changed_on TIMESTAMP(5) NOT NULL  
+);  
+
+
+
+
+Step1: Creating a new Function  -- log_First_name_changes
+
+Firstly, we are creating a new function called ***log_First_name_changes*** using the below command:
+PLPGSQL - Procedural Language/PostgreSQL
+
+CREATE OR REPLACE FUNCTION log_First_name_changes()  
+  RETURNS TRIGGER   
+  LANGUAGE PLPGSQL  
+  AS  
+$$  
+BEGIN  
+    IF NEW.First_name <> OLD.First_name THEN  
+         INSERT INTO Client_audits(Client_id,First_name,changed_on)  
+         VALUES(OLD.ID,OLD.First_name,now());  
+    END IF;  
+RETURN NEW;  
+END;  
+$$  
+
+
+
+Step2: Creating a new Trigger - First_name_changes
+
+After creating a new function (log_First_name_changes) successfully, 
+we will fix the trigger function to the Clients table where the trigger_name is First_name_changes.
+
+
+
+CREATE TRIGGER First_name_changes  
+ BEFORE UPDATE  
+ ON Clients  
+ FOR EACH ROW  
+ EXECUTE PROCEDURE log_First_name_changes();  
+
+
+
+Step3: Inserting the Data
+After creating the new function as log_First_name_changes() and new trigger as 
+First_name_changes successfully, we will enter some values into the Clients table with the INSERT command's help.
+
+
+
+INSERT INTO Clients (First_name, Last_name)  
+VALUES ('Mike', 'Ross'),  
+('Olivia', 'Smith');  
+
+
+
+Step4: Retrieving the data
+
+SELECT * FROM Clients;  
+
+
+
+Step5: Updating the First_name
+So here, we are updating Olivia's first name to the new one with the help of the UPDATE command, as shown below:
+
+UPDATE Clients  
+SET First_name = 'Alivia'  
+WHERE ID = 2;  
+
+
+Step6: Verifying the Data after modification
+Now, we will verify that if the First name of Olivia has been updated successfully or not using the following SELECT command:
+
+SELECT * FROM Clients;  
+
+
+
+Step7: Validate the contents
+After performing all the above steps successfully, in the end, we will validate the contents 
+of the Client_audits table with the help of the following SELECT command:
+
+SELECT * FROM Client_audits; 
+
+
+
+

@@ -1,0 +1,9 @@
+sudo useradd -s /bin/bash -m username
+sudo mkdir /home/username/.ssh/
+sudo chmod 777 /home/username/ /home/username/.ssh/
+sudo echo "ssh-rsa <your ssh key>" >> /home/username/.ssh/authorized_keys
+sudo chmod 600 /home/username/.ssh/authorized_keys
+sudo chmod 700 /home/username/.ssh/
+sudo chmod 700 /home/username/
+sudo chown -R username /home/username/
+sudo chgrp -R username /home/username/

@@ -1,0 +1,95 @@
+Interview questions:
+=============================
+
+Tell me about yourself(in formal way include about your projects and Technologies only, 
+interviewer dont want to know yor personal stuff)
+
+Roles and responsibilities
+About the project
+Experience in Flask and django(years)
+List vs Sets
+Memory Management in python
+Pickling and unpickling
+Method overloading in python
+Class methods and instance methods
+Instance variables can access class variables
+Append and extend
+Decorators
+Call by refrence and call by value
+Shallow copy and Deep copy
+Circular Import
+Avoid circular import
+Generator and Iterator
+_init.py_ uses
+Method resolution order
+how import works
+Django vs Flask
+Middleware
+Signals in django
+gunicorn in mongodb
+Mongodb wth django
+make migrations
+migrate
+allowed_host in settings.py
+authentication in flask and django
+
+
+roles and responsibilities
+Django vs flask 8/10
+flask vs Django
+create rest api in Django
+exception handling in flask
+db conneciton in flask
+authenitication in falsk
+get vs filter in django
+django authentication
+authitnication vs authoization
+check authorization in djang
+token based in rest api
+serlizers in django
+singanls in django
+decorators in django
+acid in django
+queue based system kafka
+micro services in flask
+deployemnt in projects
+max salary of each department in sql
+indexing in sql
+template in djagno dashboard
+
+
+
+2.Instance Variable
+3.Static Variable
+4.Class Variable 
+5.Pickling and Unpickling 
+6.diff between Django and Flask
+7.List Vs Set
+8.Diff Between Append() and Extend() in List
+9.Shallow Copy and Deep Copy
+10. Diff Between Iterator vs Generator
+11.Is Python Call by Value or Call By Reference
+12.Middleware Classes in Django
+13.Signals in Django
+
+
+14.why django is a full stack Web framework
+15.Diff Between  migrate and make migrations
+16.what is Allowed_Hosts in  Django
+17.what is NoSQL Database
+18.diff between union and union all in SQL Query
+19.sessions in Django
+20.architechture of Django
+21.Jinja2 Template 
+22. Decorators in python
+23.Oops Comcepts
+
+
+
+1. roles and responsibilities
+2. oops concepts
+3. encapsulation abstraction inheritance polymorphism
+4. list vs tuple
+5. shallow copy vs deep copy
+6. blueprint in flask
+7. sqlAlchemy
