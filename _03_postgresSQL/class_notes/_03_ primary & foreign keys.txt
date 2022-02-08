@@ -1,0 +1,242 @@
+primary key:
+
+A primary key is the column / columns that contain values that uniquely identify each row in a table.
+	Primary keys must contain UNIQUE values, and cannot contain NULL values.
+
+	A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns
+	(fields).
+	
+	A database table must have a primary key for Optim to insert, update, restore, or delete data from a database table. 
+	Optim uses primary keys that are defined to the database.
+
+
+CREATE TABLE Persons (
+    Personid AUTOINCREMENT PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+
+CREATE TABLE fruits(
+   id SERIAL PRIMARY KEY,
+   name VARCHAR NOT NULL
+);
+
+INSERT INTO fruits(name) 
+VALUES('Orange');
+
+
+INSERT INTO fruits(id,name) 
+VALUES(DEFAULT,'Apple');
+
+A foreign key is a column or a group of columns in a table that reference the primary key of another table.
+The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+
+Look at the following two tables:
+
+Persons Table
+
+PersonID	LastName	FirstName	Age
+1		Hansen		Ola		30
+2		Svendson	Tove		23
+3		Pettersen	Kari		20
+Orders Table
+OrderID	OrderNumber	PersonID
+1	    77895		3
+2	    44678		3
+3	    22456		2
+4	    24562		1
+
+Notice that the "PersonID" column in the "Orders" table points to the "PersonID" column in the "Persons" table.
+
+The "PersonID" column in the "Persons" table is the PRIMARY KEY in the "Persons" table.
+
+The "PersonID" column in the "Orders" table is a FOREIGN KEY in the "Orders" table.
+
+The FOREIGN KEY constraint prevents invalid data from being inserted into the foreign key column, 
+because it has to be one of the values contained in the parent table.
+
+
+
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS contacts;
+
+CREATE TABLE customers(
+   customer_id INT GENERATED ALWAYS AS IDENTITY,
+   customer_name VARCHAR(255) NOT NULL,
+   PRIMARY KEY(customer_id)
+);
+
+CREATE TABLE contacts(
+   contact_id INT GENERATED ALWAYS AS IDENTITY,
+   customer_id INT,
+   contact_name VARCHAR(255) NOT NULL,
+   phone VARCHAR(15),
+   email VARCHAR(100),
+   PRIMARY KEY(contact_id),
+   CONSTRAINT fk_customer
+      FOREIGN KEY(customer_id) 
+	  REFERENCES customers(customer_id)
+);
+ 
+In Above the customers table is the parent table and the contacts table is the child table.
+
+Each customer has zero or many contacts and each contact belongs to zero or one customer.
+
+The customer_id column in the contacts table is the foreign key column that references the primary key column with the same name in the customers table.
+
+The following foreign key constraint fk_customer in the contacts table defines the customer_id as the foreign key, Because the foreign key constraint 
+does not have the ON DELETE and ON UPDATE action, they default to NO ACTION.
+
+
+INSERT INTO customers(customer_name)
+VALUES('BlueBird Inc'),
+      ('Dolphin LLC');	   
+	   
+INSERT INTO contacts(customer_id, contact_name, phone, email)
+VALUES(1,'John Doe','(408)-111-1234','john.doe@bluebird.dev'),
+      (1,'Jane Doe','(408)-111-1235','jane.doe@bluebird.dev'),
+      (2,'David Wright','(408)-222-1234','david.wright@dolphin.dev');
+
+
+DELETE FROM customers WHERE customer_id = 1;
+
+ON DELETE SET NULL
+
+
+
+
+
+
+create table dept(  
+  deptno     integer,  
+  dname      varchar(14),  
+  loc        varchar(13),  
+  constraint pk_dept primary key (deptno)  
+);
+
+create table emp(  
+  empno    integer,  
+  ename    varchar(10),  
+  job      varchar(9),  
+  mgr      numeric(4,0),  
+  hiredate date,  
+  sal      numeric(7,2),  
+  comm     numeric(7,2),  
+  deptno   integer,  
+  constraint pk_emp primary key (empno),  
+  constraint fk_deptno foreign key (deptno) references dept (deptno)  
+);
+
+insert into DEPT (DEPTNO, DNAME, LOC)
+values(10, 'ACCOUNTING', 'NEW YORK');
+
+insert into dept  
+values(20, 'RESEARCH', 'DALLAS');
+
+insert into dept  
+values(30, 'SALES', 'CHICAGO');
+
+insert into dept  
+values(40, 'OPERATIONS', 'BOSTON');
+
+insert into emp  
+values(  
+ 7839, 'KING', 'PRESIDENT', null,  
+ to_date('17-11-1981','dd-mm-yyyy'),  
+ 5000, null, 10  
+);
+
+insert into emp  
+values(  
+ 7698, 'BLAKE', 'MANAGER', 7839,  
+ to_date('1-5-1981','dd-mm-yyyy'),  
+ 2850, null, 30  
+);
+
+insert into emp  
+values(  
+ 7782, 'CLARK', 'MANAGER', 7839,  
+ to_date('9-6-1981','dd-mm-yyyy'),  
+ 2450, null, 10  
+);
+
+insert into emp  
+values(  
+ 7566, 'JONES', 'MANAGER', 7839,  
+ to_date('2-4-1981','dd-mm-yyyy'),  
+ 2975, null, 20  
+);
+
+insert into emp  
+values(  
+ 7788, 'SCOTT', 'ANALYST', 7566,  
+ to_date('13-07-1987','dd-mm-yyyy'),  
+ 3000, null, 20  
+);
+
+insert into emp  
+values(  
+ 7902, 'FORD', 'ANALYST', 7566,  
+ to_date('3-12-1981','dd-mm-yyyy'),  
+ 3000, null, 20  
+);
+
+insert into emp  
+values(  
+ 7369, 'SMITH', 'CLERK', 7902,  
+ to_date('17-12-1980','dd-mm-yyyy'),  
+ 800, null, 20  
+);
+
+insert into emp  
+values(  
+ 7499, 'ALLEN', 'SALESMAN', 7698,  
+ to_date('20-2-1981','dd-mm-yyyy'),  
+ 1600, 300, 30  
+);
+
+insert into emp  
+values(  
+ 7521, 'WARD', 'SALESMAN', 7698,  
+ to_date('22-2-1981','dd-mm-yyyy'),  
+ 1250, 500, 30  
+);
+
+insert into emp  
+values(  
+ 7844, 'TURNER', 'SALESMAN', 7698,  
+ to_date('8-9-1981','dd-mm-yyyy'),  
+ 1500, 0, 30  
+);
+
+insert into emp  
+values(  
+ 7876, 'ADAMS', 'CLERK', 7788,  
+ to_date('13-07-1987', 'dd-mm-rr'),  
+ 1100, null, 20  
+);
+
+
+insert into emp  
+values(  
+ 7900, 'JAMES', 'CLERK', 7698,  
+ to_date('3-12-1981','dd-mm-yyyy'),  
+ 950, null, 30  
+);
+
+insert into emp  
+values(  
+ 7934, 'MILLER', 'CLERK', 7782,  
+ to_date('23-1-1982','dd-mm-yyyy'),  
+ 1300, null, 10  
+);
+
+insert into emp  
+values(  
+ 7654, 'MARTIN', 'SALESMAN', 7698,  
+ to_date('28-9-1981','dd-mm-yyyy'),  
+ 1250, 1400, 30  
+);

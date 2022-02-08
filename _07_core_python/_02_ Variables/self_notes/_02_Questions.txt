@@ -1,0 +1,56 @@
+Tokens
+
+Tokens can be defined as punctuater mark, reserved words and each individual word in statement.
+
+
+Types of Tokens:
+
+1). Keywords
+2). Identifiers
+3). Literals
+4). Operators
+5). Constants
+
+
+
+Identifiers		Operator		Literals
+
+    x			    =			    7
+
+
+1.Key Words
+
+	keywords are reserved words and has specific meaning in a language and they cannot be used as ordinary identifiers.
+	Ex: break, elif, False, global
+
+
+2.Identifiers
+
+	An identifier is a variable name. It is used to identify the variable name, function name, class name, module name
+	Ex: name, age
+
+Rules for Identifier:
+	An identifier must start with letters or underscore only.
+	An identifier can not start with number
+	We can't use special characters in identifier.
+
+
+3.Literals
+
+	A literal is notation of representing a fixed value in source code.Literals include string, integer,list,float types
+	Ex:  name = "Royal" ---String literal
+	     age = 21 ------- Int literal
+
+
+4.Operators
+
+	Operators are special symbols that carryout arthemetic or logical computation.
+	Ex: +, -, *  ----- arthemetic operators
+
+
+
+Constants
+
+	A constant is a type of variable whose value cannot be changed.
+	Ex: PI= 3.14
+	    Gravity = 9.8

@@ -1,0 +1,287 @@
+Database management system:
+1. Relational- mysql, postgresql, oracle, maria db, PL/sql  - table
+2. Norelational database - mongodb, cassandra - json format
+3. cloud database- AWS, oracle clouddb - either table, json
+
+What is Data?
+Data is a collection of a distinct small unit of information. It can be used in
+a variety of forms like text, numbers, media, bytes, etc. it can be stored in
+pieces of paper or electronic memory, etc.
+
+What is Database?
+A database is an organized collection of data, so that it can be easily accessed
+and managed.
+You can organize data into tables, rows, columns, and index it to make it
+easier to find relevant information.
+Database handlers create a database in such a way that only one set of software
+program provides access of data to all the users.
+
+The main purpose of the database is to operate a large amount of information
+by storing, retrieving, and managing data.
+
+There are many dynamic websites on the World Wide Web nowadays which are handled
+through databases.
+
+
+There are many databases available like
+MySQL, Sybase, Oracle, MongoDB, Informix, PostgreSQL, SQL Server, PL/SQLetc.
+
+Modern databases are managed by the database management system (DBMS).
+
+SQL or Structured Query Language is used to operate on the data stored in a database.
+SQL depends on relational database
+
+Relational database model has two main terminologies called instance and schema.
+
+The instance is a table with rows or columns
+
+Schema specifies the structure like name of the relation,
+type of each column and name.
+
+This model uses some mathematical concept like set theory and predicate logic.
+
+
+The first internet database application had been created in 1995.
+
+During the era of the relational database, many more models had introduced like object-oriented model, object-relational model, etc.
+
+Cloud database
+Cloud database facilitates you to store, manage, and retrieve their structured,
+unstructured data via a cloud platform. This data is accessible over the Internet.
+Cloud databases are also called a database as service (DBaaS) because they are
+offered as a managed service.
+
+Some best cloud options are:
+
+AWS (Amazon Web Services)
+Snowflake Computing
+Oracle Database Cloud Services
+Microsoft SQL server
+Google cloud spanner
+
+
+Advantages of cloud database
+
+1.Lower costs
+2.Generally, company provider does not have to invest in databases.
+    It can maintain and support one or more data centers.
+3.Automated
+4.Cloud databases are enriched with a variety of automated processes such as
+    recovery, failover, and auto-scaling.
+5.Increased accessibility
+6.You can access your cloud-based database from any location, anytime.
+All you need is just an internet connection.
+
+NoSQL Database NORELATIONAL database
+
+A NoSQL database is an approach to design such databases that can accommodate
+a wide variety of data models. NoSQL stands for "not only SQL."
+It is an alternative to traditional relational databases in which data is placed
+in tables, and data schema is perfectly designed before the database is built.
+    NoSQL databases are useful for a large set of distributed data.
+    Some examples of NoSQL database system with their category are:
+        MongoDB, cassandra,CouchDB, Cloudant (Document-based)
+        Memcached, Redis, Coherence (key-value store)
+        HBase, Big Table, Accumulo (Tabular)
+
+Advantage of NoSQL
+    1.High Scalability
+    2.NoSQL can handle an extensive amount of data because of scalability.
+    3.If the data grows, NoSQL database scale it to handle that data in an efficient
+    manner.
+    4.High Availability
+    5.NoSQL supports auto replication. Auto replication makes it highly available because, in case of any failure, data replicates itself to the previous consistent state.
+
+Disadvantage of NoSQL
+1.Open source
+2.NoSQL is an open-source database, so there is no reliable standard for NoSQL yet.
+3.Management challenge
+4.Data management in NoSQL is much more complicated than relational databases.
+    It is very challenging to install and even more hectic to manage daily.
+5.GUI is not available
+6.GUI tools for NoSQL database are not easily available in the market.
+
+Backup
+Backup is a great weak point for NoSQL databases. Some databases, like MongoDB,
+have no powerful approaches for data backup.
+
+
+
+Graph Databases
+A graph database is a NoSQL database. It is a graphical representation of data.
+It contains nodes and edges. A node represents an entity, and each edge represents
+a relationship between two edges. Every node in a graph database represents a unique
+identifier.
+
+Graph databases are beneficial for searching the relationship between data because they highlight the relationship between relevant data.
+
+
+
+DBMS (Data Base Management System)
+Database management System is software which is used to store and retrieve the database.
+For example, Oracle, MySQL, etc.; these are some popular DBMS tools.
+
+DBMS provides the interface to perform the various operations like creation, deletion,
+modification, etc.
+DBMS allows the user to create their databases as per their requirement.
+DBMS accepts the request from the application and provides specific data through
+the operating system.
+DBMS contains the group of programs which acts according to the user instruction.
+It provides security to the database.
+
+Advantage of DBMS
+
+1.Controls redundancy
+2.It stores all the data in a single database file, so it can control data redundancy.
+3.Data sharing
+4.An authorized user can share the data among multiple users.
+5.It providesBackup and recovery subsystem. This recovery system creates automatic
+data from system failure and restores data if required.
+6.Multiple user interfaces
+7.It provides a different type of user interfaces like GUI, application interfaces.
+
+Disadvantage of DBMS
+1.Size
+2.It occupies large disk space and large memory to run efficiently.
+3.Cost
+4.DBMS requires a high-speed data processor and larger memory to run DBMS software, so it is costly.
+5.Complexity
+6.DBMS creates additional complexity and requirements.
+
+Database:
+A database is an organized collection of structured information, or data, stored
+in our local system.Together, the data and the DBMS, along with the applications that are associated with them,
+are referred to as a database system, often shortened to just database.
+
+DBMS:
+
+Database Management Systems (DBMS) are used to store, retrieve, and run queries on data.
+A DBMS serves as an interface between an end-user and a database, allowing users to create, read, update,
+and delete data in the database.
+
+DBMS manage the data, the database engine, and the database schema, allowing for data to be manipulated
+or extracted by users and other programs. This helps provide data security, data integrity, concurrency,
+and uniform data administration procedures.
+
+
+what is progresSQL ?
+
+It is a highly stable database management system, backed by more than 20 years of community development
+which has contributed to its high levels of resilience, integrity, and correctness. PostgreSQL is used as
+the primary data store or data warehouse for many web, mobile, geospatial, and analytics applications.
+
+What is difference between SQL and PostgreSQL?
+
+SQL server is a database management system which is mainly used for e-commerce and providing different data
+warehousing solutions.
+PostgreSQL is an advanced version of SQL which provides support to different functions of SQL like
+foreign keys, sub queries, triggers, and different user-defined types and functions.
+
+
+
+Application developer tools: sql-dev, oracle designer, oracle developer, sqlplus, pl/sql. postgresql
+
+Database:
+
+1. Relational database: Tabular format
+mysql, postgrsql, oracle, pl/sql, dbsqlite
+
+2. No Relational database: json format
+mongo Db, cassandra
+
+
+
+Data types:
+
+1.Numeric: int, float, decimal, number
+2.character/string: char, varchar, varchar(2),
+  char - predefined length
+  varchar- upto 2000 bytes
+  varchar(2) - upto 4000 bytes
+
+
+Types of languages in sql/ postgresql  commands
+
+1.DDl - Data Defination Language
+  create: create table <name> (name varchar(30), age integer)
+  alter: alter table  which makes add or delete columns
+  drop : removes the entire table from data base
+
+2.DML - Data manupulation Language
+  insert: to insert data into row wise row wise
+  update: to update the data in table of specific item
+  delete : to delete the data in table of specific item or entire row data.
+
+3.DRL: Data Retrieval language
+  select : using select * from table retrieves the data
+4.TCL: Transaction control
+  roll back: which makes you return the changes done
+  commit: It makes the changes done in table saved and not able rollback
+  save : It makes save the changes done and you can roll back or commit here.
+
+CRUD:
+Create - create table          - signup
+retrieve -  select *           - signin, my orders,
+update -  alter, insert, update - update address,
+delete -  delete, drop         - delete,
+
+
+CREATE TABLE student1(
+student1_name varchar(25),
+student1_id varchar(25),
+student1_mobile varchar(25),
+student1_marks integer,
+student1_fathername varchar(25),
+student1_place varchar(25)
+);
+INSERT INTO student1 VALUES('mahindra','124g1a0131','9652265878',450,'ramu','anantapur');
+INSERT INTO student1 VALUES('kishore','124g1a0132','7965326415',562, 'shyam','anantapur');
+SELECT * FROM student1;
+
+INSERT INTO student1 VALUES('kishore','124g1a0132','9658456465',632,'hari','anantapur');
+INSERT INTO student1 VALUES('krishna','124g1a0133','7896541231',785,'varma','anantapur');
+INSERT INTO student1 VALUES('vinay','124g1a0134','9656878456',564,'kiran','anantapur');
+SELECT * FROM student1;
+
+DELETE FROM student1 WHERE student1_marks = 632;
+DELETE FROM student1 WHERE student1_name = 'krishna';
+DELETE FROM student1 WHERE student1_fathername = 'kiran';
+SELECT * FROM student1;
+
+DROP TABLE student1;
+SELECT * FROM student1;
+
+ALTER TABLE student1 ADD COLUMN student1_email  varchar(50);
+select student1_email from student1;
+
+
+UPDATE student1 SET student1_email='mahi@gmail.com' WHERE student1_name = 'mahindra';
+select * from student1;
+UPDATE student1 SET student1_email = 'ki1234@gmail.com' WHERE student1_name='kishore';
+UPDATE student1 SET student1_email = 'krishnam@gmail.com' WHERE student1_id = '124g1a0133';
+UPDATE student1 SET student1_email = 'vinay456@gmail.com' WHERE student1_marks = 564;
+select student1_email FROM student1;
+
+
+CREATE TABLE student1_copy AS SELECT * FROM student1 WHERE 1 = 1;
+SELECT * from student1_copy;
+
+
+DROP TABLE student1_copy;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

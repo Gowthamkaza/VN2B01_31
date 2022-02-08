@@ -1,0 +1,90 @@
+How interpreter works in python.
+
+Python basically is interpreted and the interpreter actually has the structure of classic compiler.
+When you invoke the "python" command, your raw source code is scanned for tokens. These tokens are 
+parsed into a tree representing the logical structure of the program, which is finally transformed 
+into byte code.
+
+
+Features of Python:
+
+1) Easy to Learn and Use
+
+Python is easy to learn as compared to other programming languages. Its syntax is 
+straightforward and much the same as the English language. There is no use of the 
+semicolon or curly-bracket, the indentation defines the code block. It is the 
+recommended programming language for beginners.
+
+2) Expressive Language
+
+Python can perform complex tasks using a few lines of code. A simple example, 
+the hello world program you simply type print("Hello World"). It will take only 
+one line to execute, while Java or C takes multiple lines.
+
+3) Interpreted Language
+
+Python is an interpreted language; it means the Python program is executed one 
+line at a time. The advantage of being interpreted language, it makes debugging easy and portable.
+
+4) Object-Oriented Language
+
+Python supports object-oriented language and concepts of classes and objects come 
+into existence. It supports inheritance, polymorphism, and encapsulation, etc. The 
+object-oriented procedure helps to programmer to write reusable code and develop applications in less code.
+
+
+
+
+
+
+CPython:-
+	CPython is the standard implementation of python written in C program.
+
+
+IronPython:-
+	Ironpython is implementation of python targetting .NET framework and MONO.
+
+
+Jython:-
+	Jython is implementation of python designed to run on Java platform.
+
+
+
+
+Dynamically typed programming language :
+
+A language is dynamically typed if the type is associated with run-time values , and not named 
+variables/fields/etc. This means that you as a programmer can write a little quicker because 
+you do not have to specify types every time.
+
+
+Procedure Oriented programming:
+
+It is defined as a programming language derived from the structure programming and based on calling procedures. 
+The procedures are the functions, routines, or subroutines that consist of the computational steps required 
+to be carried. It follows a step-by-step approach in order to break down a task into a set of variables and 
+routines via a sequence of instructions.
+
+Object Oriented programming:
+
+Object-oriented programming is a computer programming design philosophy or methodology that organizes/ models 
+software design around data or objects rather than functions and logic. It includes two words, "object" and 
+"oriented". In a dictionary object is an article or entity that exists in the real world. The meaning of 
+oriented is interested in a particular kind of thing or entity. In layman's terms, it is a programming 
+pattern that rounds around an object or entity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

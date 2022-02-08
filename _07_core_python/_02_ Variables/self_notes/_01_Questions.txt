@@ -1,0 +1,52 @@
+What is Variable
+
+Variable is a name which is used to refer memory location of value.
+Variable also known as Identifier and used to hold value.
+
+
+
+Rules for Variables
+
+Variable names can be a group of both letters and digits, but they have to begin with letter or an underscore.
+It is recommended to use lowercase letters for variable name.
+Variable name should not be a keyword.
+
+
+
+  
+Assigning Variables
+
+1.Assigning single value to the multiple variable:
+	Python allows to assign single value to multiple varibles at a time.
+	Ex:   a = b = c = 10
+2.Assigning multiple values to multiple variables:
+	We can assign multiple values to multiple variables
+	Ex:   a, b, c = 10, Royal, 9.99
+
+
+What is reference
+
+	A name or container object pointing to another object
+
+
+
+
+			Tokens
+				Tokens can be defined as punctuater mark, reserved words and every word in statement.
+
+1.Key Words
+	keywords are reserved words and has specific meaning in a language and they cannot be used as ordinary identifiers.
+
+2.Identifiers
+	An identifier is a variable name. It is used to identify the variable.
+
+3.Literals
+	A literal is notation of representing a fixed value in source code.Literals include all data types
+
+4.Operators
+	Operators are special symbols that carryout arthemetic ot logical operations.
+
+
+
+Constants
+	A constant is a type of variable whose value cannot be changed.
