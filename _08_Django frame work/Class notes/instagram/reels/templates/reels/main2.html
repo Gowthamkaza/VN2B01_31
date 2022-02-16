@@ -1,0 +1,17 @@
+<h1>Im from main2 html</h1>
+<h2>names ----> {{key_names}}</h2>
+<h2>locations----> {{key_locations}}</h2>
+<h2>ids -----> {{key_ids}}</h2>
+
+{% for name in key_names %}
+<li>{{name}}</li>
+{% endfor %}
+
+{% for id in key_ids %}
+{% if id == 1 %}
+<p>you are match</p>
+{% else %}
+<p> you are not match {{id}}</p>
+
+{% endif %}
+{% endfor %}

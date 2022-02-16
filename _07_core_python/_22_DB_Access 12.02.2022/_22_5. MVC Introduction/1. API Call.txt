@@ -1,0 +1,201 @@
+Applications:
+================
+1. desktop vs web applications ?
+
+A desktop application is a software program that can be run on a standalone computer to perform a specific task by
+an end user. Some desktop applications such as word editor and media player allow you to perform different tasks while
+other such as gaming apps are developed purely for entertainment
+eg.msoffice
+
+Web applications include online forms, shopping carts, word processors, spreadsheets, video and photo editing,
+file conversion, file scanning, and email programs such as Gmail, Yahoo and AOL. Popular applications include
+Google Apps and Microsoft 365
+eg.gmail login page
+
+2. static vs dynamic pages ?
+
+Static files are files that clients download as they are from the server. Create a new directory, public. Express,
+by default does not allow you to serve static files. ... Note − Express looks up the files relative to the
+static directory, so the name of the static directory is not part of the URL.
+
+A dynamic web page is a web page that displays different content each time it's viewed. For example, the page may
+change with the time of day, the user that accesses the webpage, or the type of user interaction.
+
+3.client vs server side validations  +91-7406900500 91746900500 7406900500
+
+         Client-side validation is visible to the user. It involves validation on input forms through JavaScript.
+For example, if input is submitted for a phone number or email, a JavaScript validator would provide an error
+if anything is submitted that does not conform to a phone number or email
+
+         Server side validations: When you enter data, the browser and/or the web server will check to see that the data is in the correct format
+and within the constraints set by the application. Validation done in the browser is called client-side validation,
+while validation done on the server is called server-side validation
+
+4.client vs server ?
+
+In web development, 'client side' refers to everything in a web application that is displayed or takes place on
+the client (end user device). This includes what the user sees, such as text, images, and the rest of the UI,
+along with any actions that an application performs within the user's browser.
+
+Server-side is the systems that run on the server, and client-side is the software that runs on a user's web browser.
+The primary forms of web development are client-side, server-side, and full-stack development. Both client and
+server-side programs are necessary to make a website function
+
+5. API call ?
+
+API calls represent specific operations that your client applications can invoke at runtime to perform tasks,
+for example: Query data in your organization. Add, update, and delete data. Obtain metadata about your data.
+
+6.Status codes of http requests ?
+
+1xx Informational
+    100 Continue,101 Switching Protocols,102 Processing (WebDAV)
+200 success
+      200 OK, 201 Created,202 Accepted,203 Non-Authoritative Information, 204 No Content,205 Reset Content
+206 Partial Content,207 Multi-Status (WebDAV),208 Already Reported (WebDAV),226 IM Used
+
+300 Redirect
+300 Multiple Choices
+   301 Moved Permanently,302 Found,303 See Other, 304 Not Modified,305 Use Proxy,306 (Unused),307 Temporary Redirect,
+   308 Permanent Redirect (experimental),
+400 client errors
+      400 Bad Request, 401 Unauthorized,402 Payment Required, 403 Forbidden, 404 Not Found,405 Method Not Allowed
+406 Not Acceptable,407 Proxy Authentication Required,408 Request Timeout,
+500 server errors
+
+
+Desktops         : C, C++ .Net, Java, Python
+Web applications : Python/Java/.Net 
+Enterprise
+
+client - server 
+ 
+Desktop applications : Software installed in local system 
+
+UI --->  Python ---> Database
+
+Web applications  
+-----------------
+client  --> server 
+enduser --> code deployed in remote machine 
+brower  --> www.paytm.com   
+			 12.43.23.14  machine project deployment
+
+
+static page   : login page,      # gmail loginpage
+                welcome page For any user
+			   
+dynamic page  : home page        # after sign in gmail page displays mails
+
+Status codes of http requests
+
+HTTP Request Methods:
+--------------------------
+CREATE    : POST
+RETRIEVE  : GET
+UPDATE    : PUT
+DELETE    : DELETE 
+
+API CALL:
+--------------
+Request URL: https://www.javatpoint.com/
+Request Method: GET
+Payload*: json**/text/xml/csv
+
+
+
+API CALL:
+--------------------
+Request URL   : https://paytm.com/v1/api/wallet/customuserbalance
+Request Method: GET
+Payload: json*/xml/text/zip file 
+
+Using frameworks flask/django : 
+map the request url,request method with associated python function/class
+
+
+API CALL :
+============
+1.	Request URL      : https://paytm.com/papi/v1/expresscart/verify    
+														mapping in flask/django
+2.	Request Method   : POST
+
+3.  Payload			 :
+						{"cart_items":[{"product_id":322717328,
+										"qty":1,
+										"configuration":{"price":"100",
+														"recharge_number":"7406900500"
+														},
+										"meta_data":{"operator":"Vodafone Idea",
+													 "circle":"Karnataka",
+													 "productLength":1,
+													 }
+										}
+									  ]
+						}
+						
+Resposne : True/False /data /error message 
+  
+           
+		 
+Story : 
+-------
+1. Requirement Gathering:
+--------------------------
+	Description : emp detials(eid,name,sal,office,addr,mobile,mailid), 
+				  save database 
+
+
+	 
+2. Analysis:
+---------------
+	Functional :  Here we have to save emp details into databse
+	Technical  :  New/Existing code implementation
+
+				code changes where to do 
+				UI  --> Controller.py   -->  Service.py  -->   DAO.py  -->    Database 
+				   
+			UI      API Call -->   Backend
+
+	CRUD 
+	====
+	x = 10 # Create 
+	print(x) # Retrieve
+
+	http request methods : GET        POST    PUT      PATCH     DELETE 
+						   Retrieval  Create  Update   Update    Delete
+
+	API:
+	------
+	Request URL    : http://oracle.com/api/emp_register
+	Request Method : POST 
+	Payload        : {"eid":100,
+					  "name":"MadhuNettem",
+					  "sal":1000
+					  } 
+					  
+					  #mostly json format,xml,file 
+
+	Diff frameworks: Flask*, Django*, Pyramid, Bottle, FAST API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

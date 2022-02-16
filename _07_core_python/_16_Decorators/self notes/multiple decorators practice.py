@@ -2,8 +2,9 @@ print("single  decorators used in one function: ")
 def student(func):
     def raghav():
         func()
-        print("this is raghav ")
+        print("this is ragha ")
     return raghav
+
 
 @student
 def ramesh():
@@ -68,3 +69,4 @@ n1=int(input("enter the first number:"))
 n2=int(input("enter the second number:"))
 result=sum(n1,n2)
 print('the sum of two numbers is', result)
+
