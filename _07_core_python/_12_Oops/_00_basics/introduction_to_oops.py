@@ -87,8 +87,6 @@ class Car:
 
 c1 = Car("Toyota", 2016) # instance object
 c2 = Car("audi", 2020)
-c3 =
-c4
 
 print(c1.modelname, c1.year)
 c1.display()

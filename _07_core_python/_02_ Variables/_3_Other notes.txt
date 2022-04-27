@@ -1,4 +1,4 @@
-# Hadling Direct/Individual/Final value:
+# Handling Direct/Individual/Final value:
 ----------------------------------------
 >>> x = 10
 >>> # x -> variable,  10 -> value,  =  --> Operator

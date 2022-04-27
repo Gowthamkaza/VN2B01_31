@@ -123,3 +123,12 @@ def get_data():
     print("value of x",x)
 
 get_data()
+
+
+def employee(x1,x2):
+    z2=x1+x2
+    f2=x1-x2
+    return z2,f2
+result = employee(5,10)
+
+print(result)

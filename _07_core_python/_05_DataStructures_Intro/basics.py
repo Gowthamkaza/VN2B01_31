@@ -12,7 +12,7 @@ Data types -  Numbers     Boolean
 
 Data structures - String  List   Tuple  Dictionary  Set
 
-'''
+'''+
 # Data types
 # int
 x = 10

@@ -8,3 +8,12 @@ while i<= x:
     i=i+1
     print("factorial of", x,"is",fac)
     '''
+
+
+x=int(input("enter the number"))
+fac=1
+i=1
+while i<=x:
+    fac=fac*i
+    i=i+1
+    print("factorial of", x,"is",fac)

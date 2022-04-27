@@ -14,3 +14,5 @@ y = "vn2 solutions"
 print("Data type of y",type(y))
 
 # output <class 'str'>
+
+

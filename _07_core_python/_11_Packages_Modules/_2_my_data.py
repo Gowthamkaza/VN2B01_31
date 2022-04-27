@@ -1,5 +1,6 @@
 
 
+
 from _11_Packages_Modules._1_sample import sum1
 
 num1 = 10
@@ -19,3 +20,5 @@ packages/ modules /  variable,functions,class
 
 from random import randint
 randint(1,100)
+
+from

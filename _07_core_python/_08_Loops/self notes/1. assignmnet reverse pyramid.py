@@ -6,7 +6,7 @@ for i in range(0,x):
         # print reduced value in each new line  
         print(j, end=' ')
     print()
-
+print("------------------------------")
 
 x=6
 # Downward loop for inverse loop
